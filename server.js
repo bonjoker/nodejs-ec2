@@ -1,11 +1,14 @@
-slsrequire("dotenv").config();
+require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
 
+const connectDB = require("./config/db");
 const userRoutes = require("./routes/users");
 const errorHandler = require("./middlewares/error");
 
+//conect to DB
+connectDB;
 
 // Express App
 const app = express();
